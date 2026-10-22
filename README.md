@@ -21,8 +21,7 @@ css/style.css           estilos, mobile-first (quebras em 480, 768 e 1024 px)
 js/main.js              menu, links de WhatsApp, orçamento guiado, animações
 js/raio-x.js            modelo 3D do carro (carrega só quando a seção aparece)
 img/                    logo, ícones, banner e imagem de compartilhamento
-img/projetos/, img/loja/ fotos ilustrativas (ver img/CREDITOS.md)
-img/galeria/            ilustrações antigas (sem uso)
+img/galeria/            ilustrações provisórias dos projetos e da fachada
 site.webmanifest        ícone e cores para "adicionar à tela inicial"
 robots.txt, sitemap.xml SEO
 ```
@@ -36,7 +35,7 @@ robots.txt, sitemap.xml SEO
 5. **Regulagem RTA**: gráfico antes e depois
 6. **Como trabalhamos**: 5 passos
 7. **Por que a Vibex**: diferenciais e marcas
-8. **Projetos**: portfólio (hoje com fotos ilustrativas)
+8. **Projetos**: portfólio (hoje com ilustrações)
 9. **Instagram**
 10. **A loja**: fotos, mapa, endereço, horário, pagamento
 11. **Dúvidas** (FAQ)
@@ -63,7 +62,7 @@ O GitHub Pages atualiza o site em cerca de 1 minuto.
 
 Use fotos em `.webp` ou `.jpg`, com até ~300 KB cada (dá para reduzir em squoosh.app).
 
-**Projetos** (`#projetos` no `index.html`): em cada `<li class="project">`, troque o `src` da imagem em `img/projetos/` pela foto real, escreva um `alt` descrevendo a foto e ajuste a categoria, o título e o texto (carro, objetivo, equipamento). Depois apague o parágrafo "Imagens ilustrativas…" e as legendas "foto ilustrativa" da loja.
+**Projetos** (`#projetos` no `index.html`): em cada `<li class="project">`, troque o `src` da imagem por `img/projetos/nome.webp`, escreva um `alt` descrevendo a foto e ajuste a categoria, o título e o texto (carro, objetivo, equipamento). Depois apague o parágrafo "As imagens acima são ilustrações…".
 
 **Loja** (`#loja`): troque o conteúdo de cada `.photo-slot` por
 `<img src="img/loja/fachada.webp" alt="Fachada da Vibex AudioCar" loading="lazy">`.
