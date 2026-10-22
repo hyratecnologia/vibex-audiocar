@@ -1,54 +1,75 @@
 # Vibex AudioCar · site
 
-Site da **Vibex AudioCar**, som automotivo em Aparecida de Goiânia (GO).
-Página única com o projeto de som montado em 3D conforme a rolagem, galeria de trabalhos e contatos.
+Site da **Vibex AudioCar**, loja de som automotivo e acessórios em Aparecida de Goiânia (GO).
 
-Feito em HTML, CSS e JavaScript puros: sem dependências, sem etapa de build.
+No ar em: https://hyratecnologia.github.io/vibex-audiocar/
+
+Feito em HTML, CSS e JavaScript puros: sem dependências e sem etapa de build.
+
+## Versões
+
+| Versão | O que é | Como acessar |
+|---|---|---|
+| **2.0** (atual) | Site completo baseado no estudo de mercado: perfis de som, serviços, Raio-X 3D, regulagem RTA, projetos, loja, FAQ e orçamento guiado | branch `main` |
+| 1.0 | Página única com o projeto de som em 3D animado pela rolagem | tag [`v1.0`](https://github.com/hyratecnologia/vibex-audiocar/releases/tag/v1.0) (`git checkout v1.0`) |
 
 ## Estrutura
 
 ```
-index.html            página
-css/style.css         estilos
-js/main.js            modelo 3D do carro, animação por rolagem e galeria
-img/favicon.svg       ícone da aba (marca V)
-img/galeria/          imagens da galeria (ilustrações provisórias)
+index.html              página (todas as seções)
+css/style.css           estilos, mobile-first (quebras em 480, 768 e 1024 px)
+js/main.js              menu, links de WhatsApp, orçamento guiado, animações
+js/raio-x.js            modelo 3D do carro (carrega só quando a seção aparece)
+img/                    logo, ícones, banner e imagem de compartilhamento
+img/galeria/            ilustrações provisórias dos projetos e da fachada
+site.webmanifest        ícone e cores para "adicionar à tela inicial"
+robots.txt, sitemap.xml SEO
 ```
 
-## Rodar localmente
+## Seções
 
-Abra o `index.html` no navegador. Para testar como num servidor:
+1. **Hero**: chamada, botão de orçamento e desenho técnico do carro
+2. **Escolha seu som**: Upgrade de fábrica, Trio goiano, Pressão e eventos
+3. **Serviços**: som, regulagem RTA, forro de porta, multimídia, elétrica, iluminação, películas, estética e acessórios
+4. **Raio-X do carro**: modelo 3D com as camadas (portas, graves, módulos, multimídia, elétrica)
+5. **Regulagem RTA**: gráfico antes e depois
+6. **Como trabalhamos**: 5 passos
+7. **Por que a Vibex**: diferenciais e marcas
+8. **Projetos**: portfólio (hoje com ilustrações)
+9. **Instagram**
+10. **A loja**: fotos, mapa, endereço, horário, pagamento
+11. **Dúvidas** (FAQ)
+12. **Orçamento guiado**: formulário que monta a mensagem e abre o WhatsApp
+
+## Rodar localmente
 
 ```bash
 python -m http.server 8000
 # abra http://localhost:8000
 ```
 
-## Publicar no GitHub Pages
+## Publicar alterações
 
 ```bash
-git init
 git add .
-git commit -m "Site Vibex AudioCar"
-git branch -M main
-git remote add origin https://github.com/<usuario>/<repositorio>.git
-git push -u origin main
+git commit -m "descrição da mudança"
+git push
 ```
 
-No GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**, escolha `main` e a pasta `/ (root)`.
-O site fica em `https://<usuario>.github.io/<repositorio>/`.
+O GitHub Pages atualiza o site em cerca de 1 minuto.
 
-## Trocar as fotos da galeria
+## Trocar as fotos
 
-As imagens em `img/galeria/` são ilustrações de amostra. Para usar fotos reais:
+Use fotos em `.webp` ou `.jpg`, com até ~300 KB cada (dá para reduzir em squoosh.app).
 
-1. Coloque as fotos em `img/galeria/` (de preferência em 16:9, até ~300 KB cada, em `.jpg` ou `.webp`).
-2. No `index.html`, na seção `#galeria`, troque o caminho em `data-src` e no `src` da `<img>` de cada botão, e a legenda em `data-cap` e `alt`.
-3. Atualize também o `src` e a legenda da imagem grande (`#bigimg` / `#bigcap`), que mostra a primeira foto.
+**Projetos** (`#projetos` no `index.html`): em cada `<li class="project">`, troque o `src` da imagem por `img/projetos/nome.webp`, escreva um `alt` descrevendo a foto e ajuste a categoria, o título e o texto (carro, objetivo, equipamento). Depois apague o parágrafo "As imagens acima são ilustrações…".
+
+**Loja** (`#loja`): troque o conteúdo de cada `.photo-slot` por
+`<img src="img/loja/fachada.webp" alt="Fachada da Vibex AudioCar" loading="lazy">`.
 
 ## Contatos usados no site
 
-- WhatsApp: (62) 9616-6397
+- WhatsApp: (62) 9616-6397 (número em `js/main.js`, constante `WHATSAPP`, e nos links do `index.html`)
 - Instagram: [@vibex_audiocar](https://instagram.com/vibex_audiocar)
 - Endereço: Av. Diamante, 13 · Vila Oliveira, Aparecida de Goiânia - GO, 74955-220
 - Horário: segunda a sábado, 8h às 19h
