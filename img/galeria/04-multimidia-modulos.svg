@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'><defs><linearGradient id='sky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#1d1209'/><stop offset='1' stop-color='#0d0806'/></linearGradient></defs><rect width='800' height='450' fill='url(#sky)'/>
+<rect x='150' y='90' width='500' height='280' rx='4' fill='#120c08' stroke='#6E5846'/>
+<g stroke='#FF5A0A' stroke-width='3' fill='#17100a'>
+<rect x='190' y='130' width='130' height='90'/><rect x='335' y='130' width='130' height='90'/><rect x='480' y='130' width='130' height='90'/>
+<rect x='190' y='250' width='270' height='80'/><rect x='480' y='250' width='130' height='80'/>
+</g>
+<g stroke='#FFC21A' stroke-width='2' opacity='.8'>
+<path d='M205 150 V200 M225 150 V200 M245 150 V200 M265 150 V200 M285 150 V200'/>
+<path d='M350 150 V200 M370 150 V200 M390 150 V200 M410 150 V200 M430 150 V200'/>
+<path d='M210 270 H440 M210 290 H440 M210 310 H440'/>
+</g>
+<g fill='#FF5A0A'><circle cx='600' cy='150' r='6'/><circle cx='600' cy='300' r='6'/></g>
+</svg>
