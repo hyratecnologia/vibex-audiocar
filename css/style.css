@@ -161,7 +161,7 @@ html{scroll-behavior:smooth}
 .ftlogo{display:flex;justify-content:center;margin-bottom:14px;opacity:.9}
 .ftlogo .vmark{height:30px}
 
-.actionbar{grid-template-columns:1.4fr 1fr 1fr}.ab.ghost{display:none}.ab{font-size:13px;padding:11px 6px}}
+.actionbar{grid-template-columns:1.4fr 1fr 1fr}.ab.ghost{display:none!important}.ab{font-size:13px;padding:11px 6px}}
 
 .hud{width:100%;max-width:1100px;display:flex;justify-content:center;align-items:center}
 .brandmark{display:flex;align-items:center;gap:12px;text-decoration:none}
